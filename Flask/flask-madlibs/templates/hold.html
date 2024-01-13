@@ -1,0 +1,20 @@
+   
+// Prompt Maker:
+    <form action="/story">
+        {% for prompt in prompts %}
+            <p>{{prompt}}:
+                <input name="{{prompt}}" placeholder="Enter your {{prompt}}">
+            </p>
+        {% endfor %}
+
+// Further Study: Choose Your Story Option
+        <h3>Choose Your Story!</h3>
+        <form action="/prompts">
+            <select name="story-select" id="story-select">
+                <option>---Choose Your Story---</option>
+                <option value="starter">Once upon a time...</option>
+                <option value="sugar">Every Morning...</option>
+                <option value="rap">Lose Yourself...</option>
+            </select>
+            <button>Select</button>
+        </form>
