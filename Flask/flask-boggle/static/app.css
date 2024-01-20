@@ -1,0 +1,30 @@
+body {
+    display: flex;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.grid-container > div {
+    width: 48px;
+    height: 48px;
+    border: 1px solid navy;
+    font-size: xx-large;
+    text-align: center;
+    box-shadow: 5px 2.5px 2.5px black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+
+.boggle-letter:hover {
+    cursor: crosshair;
+    background-color: pink;
+}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Boggle Board{% endblock %}
+
+{% block content %}
+
+    <section id="boggle-game">
+        <table id="boggle-board">
+            <tbody>
+                {% for row in board %}
+                    <tr>
+                        {% for letter in row %}
+                            <td>{{letter}}</td>
+                        {% endfor %}
+                    </tr> 
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p class="timer">
+            You have <b class="time">60</b> seconds!
+            
+        </p>
+
+        <form class="word-form" method="POST" autocomplete="off">
+            <input name="word" class="word">
+            <button>Guess</button>
+        </form>
+        
+       
+        <p class="message">
+             <!-- Display message (word status, game over) -->
+        </p>
+
+        <p class="score">
+            <!-- Display score -->
+        </p>
+
+        
+    </section>
+
+    
+
+{% endblock %}

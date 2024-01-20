@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/app.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <main id="content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+<!-- Library JS & own JS -->
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+
+<script src="/static/app.js"></script>
+
+<script>
+    let game = new BoggleRound("boggle-game", 60)
+</script>
+</body>
+</html>
